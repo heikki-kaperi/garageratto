@@ -11,52 +11,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css"> 
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon"> 
+
+  <!-- 
+    - Flag Icons Library
+  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.6.6/css/flag-icons.min.css">
+
 </head>
 
-
 <body>
-    <nav class="navbar">
-        <div class="container">
-              <div class="logo">
-                  <a href="index.html">
-                      <img src="images/logo-sm1.png" alt="garageratro logo" style="margin-left: 20px; padding: 3px;">
-                  </a>
-              </div>
 
-              <div class="main-menu">
-              <ul>
-                <li>
-                  <a href="index.html">ETUSIVU</a>
-                </li>
-                <li>
-                  <a href="#">PALVELUT</a>
-                </li>
-                <li>
-                  <a href="#location">YHTEISTIEDOT</a>
-                </li>
-              </ul>
-          </div>
-          <!-- Hamburger Button -->
-          <button class="hamburger-button">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
+
+
+	<!-- 
+	-----------------------------------------------
+    #HEADER
+	-----------------------------------------------
+	-->
+
+
+
+  <header class="header">
+    
+    <div class="header-bottom skewBg" data-header>
+      <div class="container">
+
+        <a href="index.html" class="logo"><img src="images/logo-sm1.png" alt="garageratro logo" style="margin-left: 20px; padding: 3px;"></a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+
+            <li class="navbar-item">
+                  <a href="#service" class="navbar-link skewBg" data-nav-link>Palvelut</a>
+                  </li>
+            
+            <li class="navbar-item">
+                  <a href="#location" class="navbar-link skewBg" data-nav-link>Yhteistiedot</a>
+                  </li>
+
+            <li class="navbar-item">
+                  <a href="eng.html" class="navbar-link skewBg" data-nav-link>
+                    <span class="fi fi-gb" style="font-size: 1.3em; padding: 5px"></span> </a>
+                  </li>
+
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+
+          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+            <ion-icon name="menu-outline" class="menu"></ion-icon>
+            <ion-icon name="close-outline" class="close"></ion-icon>
           </button>
-          <div class="mobile-menu">
-              <ul>
-                <li>
-                  <a href="index.html">ETUSIVU</a>
-                </li>
-                <li>
-                  <a href="#">PALVELUT</a>
-                </li>
-                <li>
-                  <a href="#">YHTEISTIEDOT</a>
-                </li>
-              </ul>
-          </div>
+
+        </div>
       </div>
-    </nav>
+    </div>
+  </header>
     
 <!-- Hero -->
 
@@ -82,14 +93,12 @@
     <br>
     <br>
 
-            <h2 class="hero-heading text-xx1" style="text-align: center;">
-              Korjaamon <span class="span"> esittelyvideo</span>
-            </h2>
-
-            <a href="https://youtu.be/zLRhTjUl4XA" target="_blank">
-            <img src="images/gallery/gallery-06.jpg" loading="lazy"
-                    class="img-cover" style="border-radius: 10px; box-shadow: 0px 0px 10px #000;"> 
-                </a>
+			        <div class="responsive-iframe">
+                <iframe width="660" height="371" src="https://www.youtube.com/embed/kS9OJZwwDb0?si=lyhzaeMGwKaD2HjP" 
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+			        </div>
 
           </div>
 </section>
@@ -102,7 +111,7 @@
 <section class="video" id="location">
   <div class="desktop-location">
     <h2 class="video-heading text-xl text-center" style="font-family: Bebas Neue; font-size: 4rem">
-      Osoite
+      Yhteistiedot
     </h2>
     <div class="video-content">
       <ul>
@@ -115,6 +124,14 @@
             Riitasensuontie 93
             <br>
             58170 Simanala
+            <ul style="display: flex; margin-top: -20px; margin-left: -25px;">
+              <li>
+                <ion-icon name="call" id="tablet-icon" style="margin-top: 40px"></ion-icon>
+              </li>
+              <li>
+<a href="tel:+358402573780" class="text-xl" style="margin-left:-45px">+358 40 2573780</a>
+              </li>
+            </ul>
           </p>
           </div>
         </li>
@@ -130,7 +147,7 @@
 
     <div class="mobile-location">
     <h2 class="video-heading text-xl text-center" style="font-family: Bebas Neue; font-size: 4rem">
-      Osoite
+      Yhteistiedot
     </h2>
     <div class="video-content">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d142668.75699207114!2d28.915536111073504!3d61.97691069122751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469a4f919654b189%3A0x1c5cbebfb07939c7!2sGarageratto%20-%20Tmi%20Timo%20V%C3%A4h%C3%A4kuopus!5e0!3m2!1sen!2sfi!4v1752919678154!5m2!1sen!2sfi" width="500" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -143,227 +160,278 @@
             Riitasensuontie 93
             <br>
             58170 Simanala
+            <ul style="display: flex; padding: 0px; margin: 0px">
+              <li>
+                <ion-icon name="call"></ion-icon>
+              </li>
+              <li>
+<a href="tel:+358402573780" class="item-text" style="margin-left:-45px">+358 40 2573780</a>
+              </li>
+            </ul>
+            
+            </div>
+            
             </p>
+            
             </div>
     </div>
   </div>
 
 
 </section>
-<!-- Testimonials -->
-<section class="testimonials bg-dark">
-  <div class="container">
-    <h3 class="testimonials-heading text-xl">
-      Don't just take our word for it, see the success stories from businesses just like yours.
-    </h3>
-    <div class="testimonials-grid">
-      <div class="card">
-        <p>
-          "Our business has seen a significant increase in productivity since we started using the Growth app."
-        </p>
 
-        <p>Katherine Smith</p>
-        <p>Capodopera</p>
-      </div>
+		<!-- 
+		-----------------------------------------------
+        #Gallery
+		-----------------------------------------------
+		-->
+	   
 
-      <div class="card">
-        <p>
-          “As a small business owner, it's important to have a tool that can help me keep track of everything. The Growth app has been a lifesaver for me, allowing me to manage my contacts, schedule appointments, and track progress all in one place..”
-        </p>
+	        <section class="section latest-game" id="gallery" aria-label="gallery" style="background-color:#272329;">
+        <div class="container" style="display:flex; margin-top: 150px; background-color: #272329;">
 
-        <p>Johnathan Lee</p>
-        <p>Red Bolt</p>
-      </div>
+          <ul class="has-scrollbar">
 
-      <div class="card">
-        <p>
-          “The dashboards and reporting feature has provided valuable insights into our performance and helped us make data-driven decisions. It's a game changer for us.”
-        </p>
+            <li class="scrollbar-item">
+              <div class="latest-game-card" style="padding: 17px">
 
-        <p>David Wilson</p>
-        <p>Slide</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section class="pricing">
-  <div class="container-sm">
-    <h3 class="pricing-heading text-xl text-center">
-      Pricing
-    </h3>
-    <p class="pricing-subheading text-md text-center">
-      Start free and scale while you grow. No hidden fees. Unlimited users for free.
-    </p>
-    <div class="pricing-grid">
-
-      <!-- Pricing card 1 -->
-       <div class="card bg-light">
-        <div class="pricing-card-header">
-          <h4 class="pricing-heading text-xl">
-            Simple
-          </h4>
-          <p class="pricing-card-subheading">
-            Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-          </p>
-          <p class="pricing-card-price">
-            <span class="text-cl">Free</span>
-            *No credit card needed
-          </p>
-        </div>
-        <div class="pricing-card-body">
-          <ul>
-                <li><i class="fas fa-check"></i>Real time monitoring </li>
-                <li><i class="fas fa-check"></i>Track key performance indicators </li>
-                <li><i class="fas fa-check"></i>Schedule appointments</li>
-                <li><i class="fas fa-check"></i>Organize, delegate and keep track of tasks </li>
-              </ul>
-              <a href="#" class="btn btn-primary btn-block">Get Started</a>
-          </ul>
-        </div>
-       </div>
-
-
-              <!-- Pricing Card 2 -->
-          <div class="card bg-black">
-            <div class="pricing-card-header">
-              <h4 class="pricing-card-heading text-xl">Premium</h4>
-              <p class="pricing-card-subheading">
-                Keep track of your contacts, gain valuable insights, analyze
-                live data and performance metrics.
-              </p>
-              <p class="pricing-card-price">
-                <span class="text-xl">$49</span> /month
-              </p>
-            </div>
-            <div class="pricing-card-body">
-              <p>Everything from the free plan plus:</p>
-              <ul>
-                <li><i class="fas fa-check"></i>Data-driven decisions</li>
-                <li><i class="fas fa-check"></i>Data visualization</li>
-                <li><i class="fas fa-check"></i>Schedule appointments</li>
-              </ul>
-              <a href="#" class="btn btn-primary btn-block">Get Started</a>
-            </div>
-          </div>
-        </div>
-        <p class="pricing-footer text-center">
-          All prices are in USD and charged per month with applicable taxes added at checkout.
-        </p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq bg-light">
-  <div class="container-sm">
-    <h3 class="text-xl text-center">
-      Frequently Asked Questions
-    </h3>
-    <ul class="faq-menu">
-      <li class="active">All</li>
-      <li>Getting Started</li>
-      <li>Pricing</li>
-    </ul>
-    <div class="faq-content">
-      <div class="faq-group">
-        <div class="faq-group-header">
-          <h4 class="text-md">
-            How does the contact management feature help me keep track of clients and partners?
-          </h4>
-          <i class="fas fa-minus"></i>
-        </div>
-        <div class="faq-group-body open">
-          Keep track of your contacts, gain valuable insights, analyse live data and performance metrics.
-        </div>
-      </div>
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">
-                Can I customize the dashboards and reporting feature to display
-                the metrics that are most important to my business?
-              </h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
-                culpa enim blanditiis rem ipsum aliquam, unde iste fugit
-                praesentium eos?
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">
-                How does the task management feature help me delegate tasks to
-                my team and track progress?
-              </h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Incidunt, a! Quaerat, voluptatum. Animi molestias ex quasi
-                explicabo minima perferendis commodi.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">
-                Can I collaborate with my team in real-time using all tools?
-              </h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
-                aliquid. Repellat animi quam vitae.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">Is the app available on all devices?</h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
-                aliquid. Repellat animi quam vitae.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-group">
-            <div class="faq-group-header">
-              <h4 class="text-md">
-                How does the app help me stay compliant when working with
-                freelancers and contractors?
-              </h4>
-              <i class="fas fa-plus"></i>
-            </div>
-            <div class="faq-group-body">
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati doloremque assumenda aut dolorem recusandae quibusdam
-                aliquid. Repellat animi quam vitae.
-              </p>
-            </div>
-
-    </div>
-  </div>
-</section>
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-01.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
 
         
-    <script src="js/main.js"></script>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-02.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+
+               
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-03.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+              </div>
+            </li>
+          </ul>
+          <br>
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-04.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+
+                
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-05.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+
+                
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-06.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+              </div>
+            </li>
+          </ul>
+          <br>
+        </div>
+      </section>
+
+
+       <section class="section latest-game" id="gallery" aria-label="gallery" style="background-color:#272329;">
+        <div class="container" style="display:flex; margin-top: 150px; background-color: #272329; padding-bottom: 80px;">
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card-mobile" style="padding: 17px; margin-top: -270px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-01.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+
+        
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card-mobile" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-02.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+
+               
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="latest-game-card-mobile" style="padding: 17px">
+
+                <figure class="card-banner img-holder">
+                  <img src="images/gallery/gallery-05.jpg" loading="lazy"
+                  alt=""
+                  title=""
+                    class="img-cover">
+                </figure>
+              </div>
+            </li>
+          </ul>
+      </section>
+
+
+
+		<!--
+		-----------------------------------------------
+        #FOOTER
+		-----------------------------------------------
+		-->
+
+
+
+  <footer class="footer" id="footer">
+  <br>
+  <br>
+  <br>
+  <br>
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <p class="logo2">Garageratto</p>
+          <p class="footer-list-title" id="some"></p>
+          <p class="footer-text">
+            Tmi Timo Vähäkuopus
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <address class="item-text">
+                <a href="https://maps.app.goo.gl/TxCR92C52SjMtLqi7">Osoite : <br> Riitasensuontie 93 <br>58170 Simanala</a>
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <div class="contact-icon">
+                <ion-icon name="call"></ion-icon>
+              </div>
+              
+              <a href="tel:+358408505051" class="item-text">Puhelin : +358 40 257 3780</a>
+             
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-wrapper" style="align-items: right;">
+
+          <div class="social-wrapper">
+
+            <ul class="contact-list">
+              <li>
+                <a href="https://www.youtube.com/channel/UCb4zCHH-0_lLvnXn507vouw" target="_blank" class="social-link-2" style="background-color: #fd1d1d">
+                  <ion-icon name="logo-youtube"></ion-icon>
+				  <p>Youtube</p>
+                </a>
+<a style="margin: 3px;"></a>
+              <li>
+                <a href="https://www.instagram.com/kaptamgamers" target="_blank" class="social-link-2" style="background-color: #e60073">
+                  <ion-icon name="logo-instagram"></ion-icon>
+				   <p>Instagram</p>
+                </a>
+              </li> 			  
+
+            </ul>
+
+           </div>
+
+        </div>
+
+      </footer> 
+  <footer>
+     <div class="footer-bottom" style="color:white; margin-bottom:-50px">
+      <div class="container">
+
+        <p class="copyright" style="color:white">
+          &copy; 2025 Garageratto. 
+          Nettisivun tehnyt <a href="https://github.com/Kyouma960" class="copyright-link">Kyouma960</a> 
+          ja <a href="https://github.com/heikki-kaperi" class="copyright-link">heikki-kaperi</a>.
+        </p>
+
+      </div>
+    </div>
+</footer> 
+  
+
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="js/main.js"></script>
+  
 </body>
 </html>
 
-<!-- tdsdsdsdsdesting -->
+<!-- testing -->

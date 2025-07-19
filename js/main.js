@@ -36,26 +36,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Mobile menu
 
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburgerButton = document.querySelector('.hamburger-button');
-  const mobileMenu = document.querySelector('.mobile-menu');
+const navbar = document.querySelector("[data-navbar]");
+const navbarLinks = document.querySelectorAll("[data-nav-link]");
+const navbarToggler = document.querySelector("[data-nav-toggler]");
 
-  hamburgerButton.addEventListener('click', () =>
-    mobileMenu.classList.toggle('active')
-  );
+navbarToggler.addEventListener("click", function () {
+  navbar.classList.toggle("active");
+  this.classList.toggle("active");
 });
 
-// Scroll to ID
+for (let i = 0; i < navbarLinks.length; i++) {
+  navbarLinks[i].addEventListener("click", function () {
+    navbar.classList.remove("active");
+    navbarToggler.classList.remove("active");
+  });
+}
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});

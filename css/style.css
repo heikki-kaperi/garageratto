@@ -1,0 +1,590 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --c1: #F5E3C3;          /* Text and teeth */
+  --c2: #A29B9A;          /* Eyes and soft accents */
+  --c3: #D6725D;          /* Main rat color */
+  --c4: #B5533D;          /* Ear and nose highlights */
+  --c5: #6A4A37;          /* Gear/ear detail */
+  --c6: #3A2218;          /* Outline and background */
+  --primary-color: #4891ff;
+  --light-color: #f4f4f6;
+  --dark-color: #111;
+}
+
+body {
+  font-family: "Chivo", "Staatliches", "Bebas Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 
+----------------
+Navbar
+----------------
+*/
+
+.navbar {
+  background: var(--c6);
+  padding: 0px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .main-menu ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  font-family: Bebas Neue;
+  padding: 10px 20px;
+  display: block;
+  font-weight: 400;
+  transition: 0.25s;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.navbar ul li a:hover {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.navbar ul li a i {
+  margin-right: 10px;
+}
+
+/* 
+----------------
+Hero
+----------------
+*/
+
+.hero {
+  background: var(--c4);
+}
+
+.hero .container {
+  background-size: contain;
+  background-position: center bottom;
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+
+.hero .hero-content {
+  width: 70%;
+  background-color: #ffb38b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+}
+
+.hero .hero-text {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+.hero .hero-heading {
+  font-size: 2.5rem;
+  font-family: Bebas Neue;
+  font-weight: 300;
+}
+
+/* 
+----------------
+Video
+----------------
+*/
+
+.video {
+  padding: 10px 0 40px;
+  background-color: #a66139;
+}
+
+.video .video-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video .video-content ul li {
+  display: grid;
+  grid-template-columns: 1fr;
+  float: left;
+  padding: 20px;
+
+}
+
+#location.video {
+  align-items: center;
+}
+
+.video .video-preview {
+  margin-bottom: 20px;
+}
+
+/* 
+----------------
+Testimonials
+----------------
+*/
+
+.testimonials {
+  padding: 40px 0;
+}
+
+.testimonials .testimonials-heading {
+  width: 700px;
+  margin-bottom: 40px;
+}
+
+.testimonials .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+}
+
+.testimonials .card p:nth-child(2) {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* 
+----------------
+Pricing
+----------------
+*/
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pricing .pricing-card-subheading {
+   margin-bottom: 30px;
+}
+
+.pricing .pricing-card-price {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+.pricing .ul {
+  margin: 30px 0;
+}
+
+.pricing ul li {
+    margin-bottom: 20px;
+}
+
+.pricing ul li i {
+    margin-right: 10px;
+}
+
+/* 
+----------------
+FAQ
+----------------
+*/
+
+.faq {
+  padding: 40px 0;
+}
+
+.faq .faq-group {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq .faq-group .faq-group-header {
+  padding: 20px 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.faq .faq-group .faq-group-header h4  {
+  font-weight: 600;
+  width: 95%;
+  cursor: pointer;
+}
+
+.faq .faq-group .faq-group-header i {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.faq .faq-group .faq-group-body {
+  display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+  display: block;
+}
+
+.faq ul.faq-menu {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.faq ul.faq-menu li.a {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+
+/* 
+----------------
+Utility Classes 
+----------------
+*/
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
+.light-bg {
+  background-color: #ccc;
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+/* 
+----------------
+Card
+----------------
+*/
+
+.card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* 
+----------------
+Buttons 
+----------------
+*/
+
+.btn {
+  display: inline-block;
+  padding: 13px 20px;
+  background: var(--light-color);
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.btn:hover{
+  background: #615fe1;
+}
+
+.btn-primary {
+  background: #1100ff;
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%
+}
+
+/* 
+----------------
+Text Classes
+----------------
+*/
+
+.text-xxl {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 40px 0 20px;
+}
+
+.text-xl {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 0 20px;
+}
+
+.text-l {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 0 20px;
+}
+
+.text-m {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 20px 0 10px;
+}
+
+.text-s {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 10px 0 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 
+----------------
+Background
+----------------
+*/
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+.bg-grey {
+  background: #ccc;
+  color: #000;
+}
+
+/* 
+----------------
+Hamburger button
+----------------
+*/
+
+.hamburger-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #ddd;
+  margin: 6px 0;
+}
+
+.video .mobile-location {
+  display: none;
+}
+
+/* 
+----------------
+Mobile menu
+----------------
+*/
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  z-index: 100;
+  background: var(--c6);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0,2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu ul {
+  margin-top: 100px;
+  padding-right: 10px;
+}
+
+.mobile-menu ul li {
+  margin: 10px 0;
+}
+
+.mobile-menu ul li a {
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+
+/* 
+----------------
+Media Queries
+----------------
+*/
+
+@media (max-width: 1278px) {
+  .video .video-content ul li {
+  align-items: center;
+  float: none;
+ }
+ #tablet-view.light-bg {
+  padding: 20px;
+ }
+}
+
+@media (max-width: 960px) {
+  .text-xxl {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .video .desktop-location {
+    display: none;
+  }
+    
+  .navbar .hamburger-button {
+    display: block;
+  }
+
+ .video .mobile-location {
+    display: block;
+  }
+
+  .hero .hero-content,
+  .hero .hero-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero .hero-buttons .btn {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .testimonials .testimonials-heading {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .testimonials .testimonials-grid,
+  .pricing .pricing-grid,
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .card {
+    margin-right: 0;
+  }
+
+  .footer .footer-grid {
+    text-align: center;
+  }
+  
+
+
+  /* Text */
+
+  .text-xl {
+    font-size: 1.9rem;
+  }
+
+  .text-lg {
+  font-size: 1.5rem;
+  }
+
+  .text-md {
+  font-size: 1.1rem;
+  }
+    
+}
+
+@media (max-width: 500px) {
+  .text-xxl {
+    font-size: 2rem;
+  }
+
+}

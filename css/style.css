@@ -29,7 +29,7 @@
   --purple: purple;
   --roman-silver: hsl(220, 6%, 59%);
 
-
+ ;
 /**
   * typography
   */
@@ -306,11 +306,10 @@ Hero
 
 .hero .hero-content2 {
   width: 70%;
-  background-color: #000000;
+  background-color: #361912;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px #000;
-  opacity: 0.7;
 }
 
 .hero .hero-text {

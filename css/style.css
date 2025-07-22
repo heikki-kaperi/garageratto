@@ -283,6 +283,12 @@ Hero
   background: var(--c4);
 }
 
+.section {
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+
 .hero .container {
   background-size: contain;
   background-position: center bottom;
@@ -298,10 +304,20 @@ Hero
   box-shadow: 0px 0px 10px #000;
 }
 
+.hero .hero-content2 {
+  width: 70%;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  opacity: 0.7;
+}
+
 .hero .hero-text {
   width: 70%;
   margin-bottom: 20px;
 }
+
 
 .hero .hero-heading {
   font-size: 2.5rem;
@@ -712,10 +728,17 @@ Media Queries
   }
 
   .hero .hero-content,
-  .hero .hero-text {
+  .hero .hero-text,
+  .hero .hero-content2 {
     width: 100%;
     text-align: center;
   }
+
+  .section {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center ;
+}
 
   .hero .hero-buttons .btn {
     margin-bottom: 10px;

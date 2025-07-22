@@ -734,6 +734,10 @@ Media Queries
     text-align: center;
   }
 
+    .hero-text span {
+    font-size: 20px;
+  }
+
   .section {
    background-repeat: no-repeat;
    background-size: cover;

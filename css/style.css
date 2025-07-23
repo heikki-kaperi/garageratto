@@ -287,6 +287,10 @@ Hero
   display: none;
 }
 
+.bg-line {
+    display: none;
+  }
+
 .hero .container {
   background-size: contain;
   background-position: center bottom;
@@ -858,6 +862,16 @@ Media Queries
   
   .bg-line2 {
     display: none;
+  }
+
+@media (max-width: 768px) {
+
+    .bg-line {
+    display: none;
+  }
+  
+  .bg-line2 {
+    display: block;
   }
 
   }

@@ -283,17 +283,16 @@ Hero
   background: var(--c4);
 }
 
-.section {
-   background-repeat: no-repeat;
-   background-size: cover;
+.bg-line2 {
+  display: none;
 }
-
 
 .hero .container {
   background-size: contain;
   background-position: center bottom;
   padding-top: 150px;
   padding-bottom: 70px;
+  
 }
 
 .hero .hero-content {
@@ -852,6 +851,15 @@ Media Queries
     align-items: center;
     gap: 20px;
   }
+
+    .bg-line {
+    display: block;
+  }
+  
+  .bg-line2 {
+    display: none;
+  }
+
   }
 
 

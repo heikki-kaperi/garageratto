@@ -334,6 +334,12 @@ Utility Classes
   padding: 0 15px
 }
 
+.container2 {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px
+}
+
 .light-bg {
   background-color: #ccc;
   padding: 2rem;
@@ -567,16 +573,27 @@ Media Queries
   display: flex;
 }
 
+  .latest-game-card {
+    display: none;
+}
+
+  .hero .hero-content,
+  .hero .hero-text,
+  .hero .hero-content2 {
+    width: 100%;
+    text-align: center;
+}
+
+}
+
+@media (max-width: 830px) {
+
   .video .desktop-location {
     display: none;
-  } 
+} 
 
  .video .mobile-location {
     display: block;
-  }
-
-  .latest-game-card {
-    display: none;
 }
 }
 
@@ -586,14 +603,7 @@ Media Queries
     display: none;
   }
 
-  .hero .hero-content,
-  .hero .hero-text,
-  .hero .hero-content2 {
-    width: 100%;
-    text-align: center;
-  }
-
-    .hero-text span {
+  .hero-text span {
     font-size: 20px;
   }
 
@@ -683,6 +693,53 @@ Media Queries
     .footer-top .container { grid-template-columns: 1fr; }
 
 
+      .header-top {
+    display: block;
+    background-image: url("../images/header-top-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    padding-block: 20px;
+  }
+
+
+  .header-bottom { outline: 1px solid hsla(0, 0%, 0%, 0.2); }
+
+  .nav-toggle-btn { display: none; }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    margin-inline: auto 15px;
+  }
+
+  .navbar-list { display: flex; }
+
+  .navbar-item:not(:last-child) { border-block-end: none; }
+
+  .navbar-link {
+    color: white;
+    font-family: Bebas Neue;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
+
+  .navbar-link::before {
+    display: block;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .navbar-link:is(:hover, :focus) {
+    background-color: transparent;
+  }
+
+  .navbar-link:is(:hover, :focus)::before { opacity: 1; }
+
+
+
 @media (min-width: 768px) {
 
   
@@ -760,50 +817,7 @@ Media Queries
    * HEADER
    */
 
-  .header-top {
-    display: block;
-    background-image: url("../images/header-top-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    padding-block: 20px;
-  }
 
-
-  .header-bottom { outline: 1px solid hsla(0, 0%, 0%, 0.2); }
-
-  .nav-toggle-btn { display: none; }
-
-  .navbar,
-  .navbar.active {
-    all: unset;
-    margin-inline: auto 15px;
-  }
-
-  .navbar-list { display: flex; }
-
-  .navbar-item:not(:last-child) { border-block-end: none; }
-
-  .navbar-link {
-    color: white;
-    font-family: Bebas Neue;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    padding: 10px 20px;
-  }
-
-  .navbar-link::before {
-    display: block;
-    opacity: 0;
-    transition: var(--transition);
-  }
-
-  .navbar-link:is(:hover, :focus) {
-    background-color: transparent;
-  }
-
-  .navbar-link:is(:hover, :focus)::before { opacity: 1; }
 
 }
 

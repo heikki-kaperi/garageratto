@@ -348,7 +348,8 @@ Utility Classes
 
 .light-bg-button :hover {
   transition-duration: 0.3s;
-  text-shadow: #B5533D 0 0 15px;
+  text-shadow: 2px 0 #f85, -2px 0 #f85, 0 2px #f85, 0 -2px #f85,
+             1px 1px #B53, -1px -1px #B53, 1px -1px #B53, -1px 1px #B53;;
 }
 
 /* 

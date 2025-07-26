@@ -346,6 +346,11 @@ Utility Classes
   border-radius: 30px;
 }
 
+.light-bg-button :hover {
+  transition-duration: 0.3s;
+  text-shadow: #B5533D 0 0 15px;
+}
+
 /* 
 ----------------
 Card
@@ -522,6 +527,12 @@ Hamburger button
   padding-right: 80px;
 }
 
+.footer .social-link-2 :hover {
+  transition-duration: 0.3s;
+  padding: 20px 20px 20px 0;
+}
+
+
 .footer-bottom-img { display: none; }
 
 .footer-bottom {
@@ -542,6 +553,10 @@ Hamburger button
   color: var(--marigold);
 }
 
+.item-text :hover {
+  transition-duration: 0.2s;
+  color: white;
+}
 
 /* 
 ----------------

@@ -168,6 +168,25 @@ ion-icon { display: block; }
   align-items: center;
 }
 
+.logo {
+  color: white;
+  font-family: Bebas Neue;
+  font-size: 3rem;
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+  background-image: url('images/logo-sm3.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 4rem;
+  font-weight: var(--fw-800);
+}
+
+.logo-icon {
+  width: 3.5rem;
+  height: auto;
+}
+
 .logo2 {
   color: var(--white);
   font-family: Dancing Script;
@@ -708,6 +727,9 @@ Media Queries
 
     .footer-top .container { grid-template-columns: 1fr; }
 
+}
+
+@media (min-width: 780px) {
 
       .header-top {
     display: block;
@@ -754,7 +776,13 @@ Media Queries
 
   .navbar-link:is(:hover, :focus)::before { opacity: 1; }
 
+}
 
+@media (max-width: 779px) {
+
+  .logo {font-size: 2rem;}
+
+}
 
 @media (min-width: 768px) {
 
